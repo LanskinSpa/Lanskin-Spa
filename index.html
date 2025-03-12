@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanskin Spa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #917441;
+            --light-gold: #e9e1d3;
+            --white: #ffffff;
+            --off-white: #f9f9f9;
+            --dark-gold: #6d5730;
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --card-bg: #fafafa;
+            --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Manrope', sans-serif;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        header {
+            text-align: center;
+            padding: 4rem 1rem 2rem;
+            background: linear-gradient(to bottom, rgba(145, 116, 65, 0.1), rgba(255, 255, 255, 0));
+        }
+        
+        .logo {
+            font-size: 2.75rem;
+            letter-spacing: -0.5px;
+            font-weight: 700;
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+        
+        .tagline {
+            font-weight: 400;
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        main {
+            flex: 1;
+            padding: 2rem 1rem 4rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid rgba(145, 116, 65, 0.1);
+        }
+        
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(145, 116, 65, 0.1);
+        }
+        
+        .card-header {
+            padding: 1.75rem 1.5rem 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(145, 116, 65, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+        
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gold);
+            letter-spacing: -0.5px;
+        }
+        
+        .card-content {
+            padding: 0.5rem 1.5rem 1.5rem;
+        }
+        
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+        
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 1.25rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: var(--transition);
+            background-color: var(--white);
+            color: var(--text-color);
+            border: 1px solid rgba(145, 116, 65, 0.2);
+        }
+        
+        .button:hover {
+            background-color: rgba(145, 116, 65, 0.05);
+            border-color: var(--gold);
+        }
+        
+        .button .arrow {
+            opacity: 0.5;
+            transition: var(--transition);
+        }
+        
+        .button:hover .arrow {
+            opacity: 1;
+            transform: translateX(3px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            color: #888;
+            font-size: 0.9rem;
+            font-weight: 400;
+        }
+        
+        @media (max-width: 768px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: 2.25rem;
+            }
+            
+            header {
+                padding-top: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="logo">LANSKIN SPA</h1>
+        <!-- <p class="tagline">Elevate your wellness experience with our premium spa services</p> -->
+    </header>
+    
+    <main>
+        <div class="grid-container">
+            <!-- To Pay Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M21 4H3C1.89543 4 1 4.89543 1 6V18C1 19.1046 1.89543 20 3 20H21C22.1046 20 23 19.1046 23 18V6C23 4.89543 22.1046 4 21 4Z" stroke="#917441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 10H23" stroke="#917441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">To Pay</h2>
+                </div>
+                <div class="card-content">
+                    <div class="button-container">
+                        <a href="https://account.venmo.com/u/Polina-LA" class="button">
+                            Venmo
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="https://enroll.zellepay.com/qr-codes?data=eyJuYW1lIjoiTEFOU0tJTiBMTEMiLCJhY3Rpb24iOiJwYXltZW50IiwidG9rZW4iOiIzMjM4MDAwOTAwIn0=" class="button">
+                            Zelle
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- To Connect Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 12H16" stroke="#917441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 8V16" stroke="#917441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#917441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">To Connect</h2>
+                </div>
+                <div class="card-content">
+                    <div class="button-container">
+                        <a href="https://www.instagram.com/lanskinspa/" class="button">
+                            Instagram
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="https://www.lanskinspa.com" class="button">
+                            Website
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- To Leave a Review Card -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="#917441" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h2 class="card-title">To Review</h2>
+                </div>
+                <div class="card-content">
+                    <div class="button-container">
+                        <a href="https://yelp.to/6Uq6fiQgCd" class="button">
+                            Yelp
+                            <span class="arrow">→</span>
+                        </a>
+                        <a href="https://maps.app.goo.gl/zMLbvyDpM9193ccp9?g_st=com.google.maps.preview.copy" class="button">
+                            Google
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        &copy; 2025 Lanskin Spa. All rights reserved.
+    </footer>
+</body>
+</html>
